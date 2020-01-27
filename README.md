@@ -23,10 +23,10 @@ python3 -i image.jpg -s man is on bike -m 1
 
 ```
 ## Requirements
-pip install numpy
-pip install sklearn
-pip install imutils
-pip install opencv-python==4.1.2
+- pip install numpy
+- pip install sklearn
+- pip install imutils
+- pip install opencv-python==4.1.2.30
 
 ## Additional Resources
 Download GloVe pretrained word vectors and pretrained activity recognition network [here](https://drive.google.com/open?id=1thhyWmmg7jANBUcLK8gr2x0B3Rc75ZEF)
