@@ -15,7 +15,7 @@ The script *main.py* is used to compare an input text to the description of an i
     
 ## Usage
 The algorithm can be tested by running the command (written below) in the terminal
-python3 main.py -i full_path_to_image -s words,sentence or phrase -m approach(this can be 1 or 2) 
+> python3 main.py -i full_path_to_image -s words,sentence or phrase -m approach(this can be 1 or 2) 
 for example:
 
 ```
