@@ -41,6 +41,7 @@ def compare_single_words(word1, word2, word_to_vec_map):
     return res
 
 def compare_words(input_words, detected_words, word_to_vec_map):
+    print("[-] Comparing word embeddings...")
     #compare word embeddings using cosine similarity score. The function returns the average cosine similarity for all comparisons
     total_avg_score = []
     for word1 in input_words:
@@ -70,7 +71,7 @@ def object_detection(image, net, THRESHOLD, CLASSES):
     #perform a forward pass through the pretrained object detector
     blob = cv2.dnn.blobFromImage(cv2.resize(image, (300, 300)), 0.007843, (300, 300), 127.5)
 
-    print("[-] Performing object detections...")
+    print("[-] Performing object detection...")
     net.setInput(blob)
     detections = net.forward()
 
@@ -90,14 +91,15 @@ def object_detection(image, net, THRESHOLD, CLASSES):
 
     #get frequency of labels and return plural
     if not detected_objects:
-        print('[-][-] No object detected ..exiting !')
+        print('[-] No object detected ..exiting !')
     else:
-        print('[-][-] Detected objects {}'.format(detected_objects))
+        print('[-] Detected objects: {}'.format(detected_objects))
         detected_objects = refine_detections(detected_objects)
 
     return detected_objects
 
 def activity_recognition(image, net,CLASSES):
+    print("[-] Performing activity detection...")
     frames = []
     #resize the image while maintaining its aspect ratio
     image = imutils.resize(image, width=400)
@@ -112,7 +114,7 @@ def activity_recognition(image, net,CLASSES):
     net.setInput(blob)
     outputs = net.forward()
     activity_label = CLASSES[np.argmax(outputs)]
-    print('[-][-] Detected activity {}'.format(activity_label))
+    print('[-] Detected Activity is: {}'.format(activity_label))
     activity_label = activity_label.split(' ')
     
     return activity_label
