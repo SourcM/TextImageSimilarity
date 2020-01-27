@@ -26,7 +26,7 @@ pip install imutils
 pip install opencv-python==4.1.2
 
 ##Additional Files
-Download GloVe pretrained word vectors and pretrained activity recognition network [here](https://pages.github.com/)
+Download GloVe pretrained word vectors and pretrained activity recognition network [here](https://drive.google.com/open?id=1thhyWmmg7jANBUcLK8gr2x0B3Rc75ZEF)
 Insert the downloaded files into the root directory containing the _main.py_ script, as well as other resources.
 
 ##Limitation
