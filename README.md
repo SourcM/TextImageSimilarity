@@ -3,8 +3,8 @@
 ##Description
 The script *main.py* is used to compare an input text to the description of an input image. 
 - GloVe pretrained word embedding vectors are used to represent words as vectors
-- using one of two methods, the input image is described in words. 
--Subsequently the embeddings of the description are compared to the input text
+- using one of two methods, the input image is described in words 
+- Subsequently the embeddings of the description are compared to the input text
   - we iteratively compare each input word to the out text, then all similarity scores are averaged in order to given a single number representing the overall average similarity score
 
 ###Image representation as text
